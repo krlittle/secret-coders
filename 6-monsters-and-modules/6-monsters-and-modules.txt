@@ -1,0 +1,270 @@
+TO HEROSTAND :size
+  CLEARSCREEN
+  PU
+  RT 180
+  FD 300
+  RT 180
+  DRAWLEGS :size
+  DRAWTORSOSTAND :size
+  DRAWHEAD :size
+END
+TO HEROATTACK :size
+  CLEARSCREEN
+  PU
+  RT 180
+  FD 300
+  RT 180
+  DRAWLEGS :size
+  DRAWTORSOPUNCH :size
+  DRAWHEAD :size
+END
+TO HEROCROUCHINGATTACK :size
+  CLEARSCREEN
+  RT 180
+  FD 300
+  RT 180
+  DRAWCROUCHINGLEGS :size
+  DRAWTORSOPUNCH :size
+  DRAWHEAD :size
+END
+TO HERODEFEND :size
+  CLEARSCREEN
+  PU
+  RT 180
+  FD 300
+  RT 180
+  DRAWLEGS :size
+  DRAWTORSOBLOCK :size
+  DRAWHEAD :size
+END
+TO DRAWHEAD :size
+  PD
+  RANDOMCOLOR
+  REPEAT 4 [
+    FD 150/:size
+    RT 90
+  ]
+  PU
+  REPEAT 2 [
+    FD 50/:size
+    RT 90
+    FD 65/:size
+    PD
+    FD 20/:size
+    PU
+     BACK 85/:size
+    LT 90
+   ]
+  BACK 22/:size
+  RT 90
+  REPEAT 2 [
+    FD 20/:size
+    PD
+    REPEAT 4 [
+      FD 45/:size
+      LT 90
+    ]
+    PU
+    FD 45/:size
+  ]
+  BACK 130/:size
+  LT 90
+  BACK 78/:size
+END
+TO DRAWTORSOSTAND :size
+  PD
+  RANDOMCOLOR
+  FD 200/:size
+  LT 90
+  FD 10/:size
+  LT 90
+  FD 200/:size
+  RT 90
+  REPEAT 3 [
+    FD 30/:size
+    RT 90
+    FD 30/:size
+    BACK 30/:size
+    LT 90
+  ]
+  RT 90
+  FD 300/:size
+  RT 90
+  FD 400/:size
+  RT 90
+  FD 300/:size
+  RT 90
+  REPEAT 3 [
+    FD 30/:size
+    RT 90
+    FD 30/:size
+    BACK 30/:size
+    LT 90
+  ]
+  RT 90
+  FD 200/:size
+  LT 90
+  FD 10/:size
+  LT 90
+  FD 200/:size
+  RT 90
+  FD 200/:size
+  RT 90
+      PU
+  FD 300/:size
+  RT 90
+  FD 25/:size
+  LT 90
+END
+TO DRAWTORSOPUNCH :size
+  PD
+  RANDOMCOLOR
+  FD 200/:size
+  LT 90
+  FD 10/:size
+  LT 90
+  FD 200/:size
+  RT 90
+  REPEAT 3 [
+    FD 30/:size
+    RT 90
+    FD 30/:size
+    BACK 30/:size
+    LT 90
+  ]
+  RT 90
+  FD 300/:size
+  RT 90
+  FD 525/:size
+  RT 90
+  REPEAT 3 [
+    FD 30/:size
+    RT 90
+    FD 30/:size
+    BACK 30/:size
+    LT 90
+  ]
+  RT 90
+  FD 225/:size
+  LT 90
+  FD 210/:size
+  RT 90
+  FD 200/:size
+  RT 90
+  PU
+  FD 300/:size
+  RT 90
+  FD 25/:size
+  LT 90
+END
+TO DRAWTORSOBLOCK :size
+  PD
+  RANDOMCOLOR
+  FD 200/:size
+  LT 90
+  FD 10/:size
+  LT 90
+  FD 200/:size
+  RT 90
+  REPEAT 3 [
+    FD 30/:size
+    RT 90
+    FD 30/:size
+    BACK 30/:size
+    LT 90
+  ]
+  RT 90
+  FD 300/:size
+  RT 90
+  FD 350/:size
+  LT 90
+  FD 150/:size
+  RT 90
+  REPEAT 3 [
+    FD 30/:size
+    RT 90
+    FD 30/:size
+    BACK 30/:size
+    LT 90
+  ]
+  RT 90
+  FD 240/:size
+  RT 90
+  FD 140/:size
+  LT 90
+  FD 210/:size
+  RT 90
+  FD 200/:size
+  RT 90
+  PU
+  FD 300/:size
+  RT 90
+  FD 25/:size
+  LT 90
+end
+TO DRAWLEGS :size
+  PD
+  RANDOMCOLOR
+  RT 45
+  FD 35/:size
+  LT 45
+  FD 225/:size
+  RT 90
+  FD 200/:size
+  RT 90
+  FD 225/:size
+  LT 45
+  FD 35/:size
+  RT 135
+  FD 100/:size
+  RT 90
+  FD 175/:size
+  LT 90
+  FD 50/:size
+  LT 90
+  FD 175/:size
+  RT 90
+  FD 100/:size
+  PU
+  BACK 100/:size
+  RT 90
+  FD 250/:size
+  LT 90
+  FD 75/:size
+  RT 90
+END
+TO DRAWCROUCHINGLEGS :size
+  PD
+  RANDOMCOLOR
+  RT 45
+  FD 35/:size
+  LT 45
+  FD 150/:size
+  RT 90
+  FD 400/:size
+  RT 90
+  FD 150/:size
+  LT 45
+  FD 35/:size
+  RT 135
+  FD 100/:size
+  RT 90
+  FD 100/:size
+  LT 90
+  FD 250/:size
+  LT 90
+  FD 100/:size
+  RT 90
+  FD 100/:size
+  RT 90
+  PU
+  FD 175/:size
+  RT 90
+  FD 125/:size
+  LT 90
+end
+to RANDOMCOLOR
+  SETCOLOR PICK [ red orange green blue violet ]
+END
+
+HEROCROUCHINGATTACK 1.25
